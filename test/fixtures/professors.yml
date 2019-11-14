@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  instrumento: MyString
+  cpf: MyString
+  identidade: MyString
+  nascimento: 2019-11-14 17:38:46
+  salario: 9.99
+
+two:
+  nome: MyString
+  instrumento: MyString
+  cpf: MyString
+  identidade: MyString
+  nascimento: 2019-11-14 17:38:46
+  salario: 9.99

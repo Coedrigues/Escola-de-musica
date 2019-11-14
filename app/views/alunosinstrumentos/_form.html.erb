@@ -1,0 +1,27 @@
+<%= form_for(alunosinstrumento) do |f| %>
+  <% if alunosinstrumento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alunosinstrumento.errors.count, "error") %> prohibited this alunosinstrumento from being saved:</h2>
+
+      <ul>
+      <% alunosinstrumento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :aluno_id %>
+    <%= f.number_field :aluno_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instrumento_id %>
+    <%= f.number_field :instrumento_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

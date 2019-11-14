@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @alunosinstrumento.aluno_id %>
+</p>
+
+<p>
+  <strong>Instrumento:</strong>
+  <%= @alunosinstrumento.instrumento_id %>
+</p>
+
+<%= link_to 'Edit', edit_alunosinstrumento_path(@alunosinstrumento) %> |
+<%= link_to 'Back', alunosinstrumentos_path %>

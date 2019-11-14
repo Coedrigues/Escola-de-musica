@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Aluno', alunos_path %>
+<%= link_to 'Instrumento', instrumentos_path %>
+<%= link_to 'Alunos Instrumentos', alunosinstrumentos_path %>
+
+<%= link_to image_tag("Escola de musica.png"), professors_path %>
+<table>
+<h1>Professor</h1>
+
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Instrumento</th>
+      <th>Cpf</th>
+      <th>Identidade</th>
+      <th>Nascimento</th>
+      <th>Salario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professors.each do |professor| %>
+      <tr> 
+        <td><%= professor.id %></td>
+        <td><%= professor.nome %></td>
+        <td><%= professor.instrumento %></td>
+        <td><%= professor.cpf %></td>
+        <td><%= professor.identidade %></td>
+        <td><%= professor.nascimento %></td>
+        <td><%= professor.salario %></td>
+        <td><%= link_to 'Show', professor %></td>
+        <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
+        <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'New Professor', new_professor_path %>
